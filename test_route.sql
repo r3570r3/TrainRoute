@@ -84,3 +84,24 @@ connect by nocycle prior from_STATION_ID = to_STATION_ID and prior train_id = tr
 trains train_data
 where
 route_result.train_id = train_data.train_id;
+
+
+
+/*
+
+"ROUTE_ID"	"TRAIN_NAME"	"FROM_STATION"	"TO_STATION"	"TRAIN_PATH"	                                "PATH_DEPTH"
+1	        "Rajdhani"	    "Sealdah"	    "Howrah"	    "/Kharagpur/Madhupur/Howrah/Sealdah"	        4
+2	        "Rajdhani"	    "Howrah"	    "Madhupur"	    "/Kharagpur/Madhupur/Howrah"	                3
+3	        "Rajdhani"	    "Madhupur"	    "Kharagpur"	    "/Kharagpur/Madhupur"	                        2
+4	        "Rajdhani"	    "Kharagpur"	    "Jammu"	        "/Kharagpur"	                                1
+6	        "Falaknuma"	    "Sealdah"	    "Madhupur"	    "/Kharagpur/Varanasi/Madhupur/Sealdah"	        4
+7	        "Falaknuma"	    "Madhupur"	    "Varanasi"	    "/Kharagpur/Varanasi/Madhupur"	                3
+8	        "Falaknuma"	    "Varanasi"	    "Kharagpur"	    "/Kharagpur/Varanasi"	                        2
+9	        "Falaknuma"	    "Kharagpur"	    "Jammu"	        "/Kharagpur"	                                1
+10	        "East Coast"	"Howrah"	    "Varanasi"	    "/Kharagpur/Asansol/Madhupur/Varanasi/Howrah"	5
+11	        "East Coast"	"Varanasi"	    "Madhupur"	    "/Kharagpur/Asansol/Madhupur/Varanasi"	        4
+12	        "East Coast"	"Madhupur"	    "Asansol"	    "/Kharagpur/Asansol/Madhupur"	                3
+13	        "East Coast"	"Asansol"	    "Kharagpur"	    "/Kharagpur/Asansol"	                        2
+14	        "East Coast"	"Kharagpur"	    "Jammu"	        "/Kharagpur"	                                1
+
+*/
